@@ -5,6 +5,7 @@ FROM mcr.microsoft.com/vscode/devcontainers/base:0-${VARIANT}
 
 ARG NODE_VERSION
 ARG RUBY_VERSION
+ARG PNPM_VERSION
 ARG USER_UID
 ARG USER_GID
 
@@ -71,5 +72,8 @@ RUN gem install bundler && bundle install
 # set up node js
 RUN npm install n -g && \
     n $NODE_VERSION
-RUN npm install --global yarn
-RUN yarn
+RUN npm install -g corepack
+RUN corepack enable
+RUN npm install -g pnpm@$PNPM_VERSION && \
+    pnpm config set package-import-method tar
+RUN pnpm install

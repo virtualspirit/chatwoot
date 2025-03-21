@@ -1,6 +1,6 @@
 {
   "name": "Chatwoot Development Codespace",
-  "service": "app",
+  "service": "base",
   "dockerComposeFile": "docker-compose.yml",
 
   "settings": {
