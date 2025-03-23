@@ -34,7 +34,7 @@ export default {
 
 <template>
   <header
-    class="header-expanded pt-6 pb-4 px-5 relative box-border w-full bg-transparent"
+    class="header-expanded pt-6 pb-4 px-5 relative box-border w-full bg-transparent background-maroon"
   >
     <div
       class="flex items-start"
@@ -53,13 +53,19 @@ export default {
     </div>
     <h2
       v-dompurify-html="introHeading"
-      class="mt-4 text-2xl mb-1.5 font-medium"
+      class="mt-4 text-2xl mb-1.5 font-medium text-white"
       :class="getThemeClass('text-slate-900', 'dark:text-slate-50')"
     />
     <p
       v-dompurify-html="introBody"
-      class="text-base leading-normal"
+      class="text-base leading-normal text-white"
       :class="getThemeClass('text-slate-700', 'dark:text-slate-200')"
     />
   </header>
 </template>
+
+<style lang="scss" scoped>
+.background-maroon {
+  background-color: #4a0000;
+}
+</style>
