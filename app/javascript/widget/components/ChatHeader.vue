@@ -59,10 +59,7 @@ export default {
 </script>
 
 <template>
-  <header
-    class="flex justify-between w-full p-5"
-    :class="getThemeClass('bg-white', 'dark:bg-slate-900')"
-  >
+  <header class="flex justify-between w-full p-5 background-maroon">
     <div class="flex items-center">
       <button
         v-if="showBackButton"
@@ -83,8 +80,7 @@ export default {
       />
       <div>
         <div
-          class="flex items-center text-base font-medium leading-4"
-          :class="getThemeClass('text-black-900', 'dark:text-slate-50')"
+          class="flex items-center text-base font-medium leading-4 text-white"
         >
           <span v-dompurify-html="title" class="mr-1" />
           <div
@@ -92,10 +88,7 @@ export default {
               ${isOnline ? 'bg-green-500' : 'hidden'}`"
           />
         </div>
-        <div
-          class="mt-1 text-xs leading-3"
-          :class="getThemeClass('text-black-700', 'dark:text-slate-400')"
-        >
+        <div class="mt-1 text-xs leading-3 text-white">
           {{ replyWaitMessage }}
         </div>
       </div>
@@ -103,3 +96,12 @@ export default {
     <HeaderActions :show-popout-button="showPopoutButton" />
   </header>
 </template>
+
+<style lang="scss" scoped>
+.background-maroon {
+  background-color: #4a0000;
+}
+.text-maroon {
+  color: #4a0000;
+}
+</style>

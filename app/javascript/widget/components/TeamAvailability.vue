@@ -61,24 +61,24 @@ export default {
 </script>
 
 <template>
-  <div class="p-4 bg-white rounded-md shadow-sm dark:bg-slate-700">
+  <div class="p-4 background-linear rounded-md shadow-sm dark:bg-slate-700">
     <div class="flex items-center justify-between">
       <div class="">
-        <div class="text-sm font-medium text-slate-700 dark:text-slate-50">
+        <div class="text-sm font-medium text-maroon">
           {{
             isOnline
               ? $t('TEAM_AVAILABILITY.ONLINE')
               : $t('TEAM_AVAILABILITY.OFFLINE')
           }}
         </div>
-        <div class="mt-1 text-sm text-slate-500 dark:text-slate-100">
+        <div class="mt-1 text-sm text-maroon">
           {{ replyWaitMessage }}
         </div>
       </div>
       <AvailableAgents v-if="isOnline" :agents="availableAgents" />
     </div>
     <button
-      class="inline-flex items-center justify-between px-2 py-1 mt-2 -ml-2 text-sm font-medium leading-6 rounded-md text-slate-800 dark:text-slate-50 hover:bg-slate-25 dark:hover:bg-slate-800"
+      class="inline-flex items-center justify-between px-2 py-1 mt-2 -ml-2 text-sm font-medium leading-6 rounded-md text-slate-800 dark:text-slate-50"
       :style="{ color: widgetColor }"
       @click="startConversation"
     >
@@ -93,3 +93,20 @@ export default {
     </button>
   </div>
 </template>
+
+<style lang="scss" scoped>
+.background-linear {
+  background: linear-gradient(
+    rgb(255, 252, 209),
+    rgb(253, 243, 192),
+    rgb(239, 218, 144),
+    rgb(251, 207, 0),
+    rgb(217, 180, 72),
+    rgb(235, 210, 114),
+    rgb(255, 252, 209)
+  );
+}
+.text-maroon {
+  color: #4a0000;
+}
+</style>

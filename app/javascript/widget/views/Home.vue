@@ -95,7 +95,7 @@ export default {
 
 <template>
   <div
-    class="z-50 flex flex-col flex-1 w-full rounded-md"
+    class="z-50 flex flex-col flex-1 w-full rounded-md background-maroon"
     :class="{ 'pb-2': showArticles, 'justify-end': !showArticles }"
   >
     <div class="w-full px-4 pt-4">
@@ -107,7 +107,9 @@ export default {
       />
     </div>
     <div v-if="showArticles" class="w-full px-4 py-2">
-      <div class="w-full p-4 bg-white rounded-md shadow-sm dark:bg-slate-700">
+      <div
+        class="w-full p-4 background-linear rounded-md shadow-sm dark:bg-slate-700"
+      >
         <ArticleHero
           v-if="
             !articleUiFlags.isFetching &&
@@ -121,9 +123,28 @@ export default {
       </div>
     </div>
     <div v-if="articleUiFlags.isFetching" class="w-full px-4 py-2">
-      <div class="w-full p-4 bg-white rounded-md shadow-sm dark:bg-slate-700">
+      <div
+        class="w-full p-4 background-linear rounded-md shadow-sm dark:bg-slate-700"
+      >
         <ArticleCardSkeletonLoader />
       </div>
     </div>
   </div>
 </template>
+
+<style lang="scss" scoped>
+.background-maroon {
+  background-color: #4a0000;
+}
+.background-linear {
+  background: linear-gradient(
+    rgb(255, 252, 209),
+    rgb(253, 243, 192),
+    rgb(239, 218, 144),
+    rgb(251, 207, 0),
+    rgb(217, 180, 72),
+    rgb(235, 210, 114),
+    rgb(255, 252, 209)
+  );
+}
+</style>
