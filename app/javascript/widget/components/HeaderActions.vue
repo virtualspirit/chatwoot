@@ -97,7 +97,7 @@ export default {
       <FluentIcon
         icon="sign-out"
         size="22"
-        :class="getThemeClass('text-black-900', 'dark:text-slate-50')"
+        :class="getThemeClass('text-slate-50')"
       />
     </button>
     <button
@@ -108,7 +108,7 @@ export default {
       <FluentIcon
         icon="open"
         size="22"
-        :class="getThemeClass('text-black-900', 'dark:text-slate-50')"
+        :class="getThemeClass('text-slate-50')"
       />
     </button>
     <button
@@ -121,7 +121,7 @@ export default {
       <FluentIcon
         icon="dismiss"
         size="24"
-        :class="getThemeClass('text-black-900', 'dark:text-slate-50')"
+        :class="getThemeClass('text-slate-50')"
       />
     </button>
   </div>

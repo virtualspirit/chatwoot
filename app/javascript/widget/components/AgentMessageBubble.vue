@@ -99,11 +99,11 @@ export default {
         !isCards && !isOptions && !isForm && !isArticle && !isCards && !isCSAT
       "
       class="chat-bubble agent"
-      :class="getThemeClass('bg-white', 'dark:bg-slate-700 has-dark-mode')"
+      :class="getThemeClass('background-chat-agent')"
     >
       <div
         v-dompurify-html="formatMessage(message, false)"
-        class="message-content text-slate-900 dark:text-slate-50"
+        class="message-content text-slate-50"
       />
       <EmailInput
         v-if="isTemplateEmail"
@@ -152,3 +152,12 @@ export default {
     />
   </div>
 </template>
+
+<style lang="scss" scoped>
+.background-chat-agent {
+  background-color: #76162a;
+}
+.text-maroon {
+  color: #4a0000;
+}
+</style>

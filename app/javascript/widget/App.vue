@@ -342,7 +342,7 @@ export default {
   </div>
   <div
     v-else
-    class="flex flex-col justify-end h-full"
+    class="flex flex-col justify-end h-full background-maroon"
     :class="{
       'is-mobile': isMobile,
       'is-widget-right': isRightAligned,
@@ -357,4 +357,7 @@ export default {
 
 <style lang="scss">
 @import 'widget/assets/scss/woot.scss';
+.background-maroon {
+  background-color: #4a0000;
+}
 </style>

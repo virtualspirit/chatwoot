@@ -69,7 +69,7 @@ export default {
         <FluentIcon
           icon="chevron-left"
           size="24"
-          :class="getThemeClass('text-black-900', 'dark:text-slate-50')"
+          :class="getThemeClass('text-slate-50')"
         />
       </button>
       <img
